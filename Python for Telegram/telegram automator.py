@@ -48,7 +48,7 @@ def sample_responses(inpTxt):
     result1 = soup.find_all('div', {"aria-level":"3"})
     print(result1)
     result2 = soup.find_all('span', class_='desktop-title-subcontent')
-    if result1[0].text == ''and result2[0].text == '':
+    if result1[0] == ''and result2[0] == '':
       return 'Sorry, I cannot help you with that, ask one word answer type questions please'
     else:
       return result1[0].text + '\n' + result2[0].text
